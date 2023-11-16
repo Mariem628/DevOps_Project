@@ -73,14 +73,14 @@ stage('Build Backend Docker Image') {
 
 	                      stage('Push Backend Docker Image') {
                                         steps {
-                                   sh 'docker push mariem15/spring-app:Toumi'
+                                   sh 'docker push mariem15/spring-app:devops'
                                             }
 		  }
 
  stage("clone frontend"){
          steps{
              script{
-                   checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url:"https://github.com/housseml17/front.git"
+                   checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url:"https://github.com/mariem15/front.git"
 
 
 ]]])
